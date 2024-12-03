@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
 import { CardSummary } from "./components/CardSumary";
 import { BookOpenCheck, Icon, UsersRound, Waypoints } from "lucide-react";
+import { LastCustomers } from "./components/LastCustomers/LastCustomers";
 
 const dataCardsSummary = [
   {
@@ -41,9 +42,12 @@ export default function Home() {
             title={title}
             tooltipText={tooltipText}
           />
-        ))}
-              
+        ))}              
       </div>
+      <div className="grid grid-cols-1 xl:grid-cols-2 md:gap-x-10 mt-12">
+        <LastCustomers/>
+        <p>Sales Distributors</p>
+      </div> 
    </div> 
   );
 }
